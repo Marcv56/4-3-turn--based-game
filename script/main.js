@@ -47,3 +47,12 @@ let Ramona = new Player {
   super();
   }
 }
+
+
+//////////////////////////////////////event listener for fight button
+// still needs function name beside click
+
+let p1Attack = () => {
+  console.log("attack");
+}
+let fightButton = document.querySelector('.attack-button').addEventListener("click", p1Attack);
