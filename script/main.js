@@ -1,4 +1,4 @@
-console.log("hello");
+
 
 
 class Enemy {
@@ -7,23 +7,12 @@ class Enemy {
   }
 }
 
-let JavaScript = new Enemy {
-  constructor(name) {
-    super();
-  }
-}
+let javaScript = new Enemy()
 
-let Css = new Enemy {
-  constructor(name) {
-    super();
-  }
-}
+let css = new Enemy()
 
-let BoaConstructor = new Enemy {
-  constructor(name) {
-    super();
-  }
-}
+let boaConstructor = new Enemy()
+
 
 class Player {
   constructor(name) {
@@ -31,22 +20,11 @@ class Player {
   }
 }
 
-let Rachel = new Player {
-  constructor(name) {
-    super();
-  }
-}
+let rachel = new Player()
 
-let Marcos = new Player {
-  constructor();
-  super();
-}
+let marcos = new Player()
 
-let Ramona = new Player {
-  constructor() {
-  super();
-  }
-}
+let ramona = new Player()
 
 
 //////////////////////////////////////event listener for fight button
