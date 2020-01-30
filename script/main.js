@@ -5,6 +5,10 @@ class Player {
   constructor(name) {
     this.health = 100;
   }
+
+  attack (player) {
+    player.health -= 5;
+  }
 }
 
 
@@ -28,6 +32,24 @@ class BTeam extends Player {
 
 
 }
+
+let rachel = new Player({
+  name: 'Rachel',
+  weapon: 'sword'
+});
+
+let marcos = new Player({
+  name: 'Marcos',
+  weapon: 'axe body spray'
+});
+
+console.log(rachel);
+console.log(marcos);
+
+rachel.attack(marcos);
+
+console.log(rachel);
+console.log(marcos);
 
 // let rachel = {    //players can have preset key value pairs by making an object for each player
 //   name: 'Rachel', //or by making an array of objects for all players
@@ -55,14 +77,9 @@ let fighters = document.querySelector('.dropdown').addEventListener('click', cho
 //////////////////////////////////////event listener for fight button
 
 
-// trying to write a function to display the enemys health when fight button is pressed
-let p1Attack = (name) => {
-
-
-  console.log("attack");
-
-}
 
 
 
-let fightButton = document.querySelector('.attack-button').addEventListener("click", p1Attack);
+
+
+// let fightButton = document.querySelector('.attack-button').addEventListener("click", attack);
