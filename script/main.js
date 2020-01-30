@@ -29,7 +29,15 @@ let marcos = new Player();
 
 let ramona = new Player();
 
+// *******************Trying to import constructor data into template**************
 
+let chooseFighter = (data) => {
+  let source = $('#choose-player-template').html();
+  let template = Handlebars.compile(source);
+  let context = data;
+  let html = template(data);
+  $('.dropdown').html(html);
+}
 
 
 //////////////////////////////////////event listener for fight button

@@ -29,14 +29,7 @@
       <div class="col-6 player">
         <div class="col player-2">
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              CHOOSE YOUR FIGHTER!
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Rachel!</a>
-              <a class="dropdown-item" href="#">Marcos!</a>
-              <a class="dropdown-item" href="#">Ramona!</a>
-            </div>
+
           </div>
         </div>
       </div>
@@ -47,6 +40,17 @@
 
 
   </div>
+
+  <script id="choose-player-template" type="text/x-handlebars-template">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    CHOOSE YOUR FIGHTER!
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">{{Rachel}}!</a>
+    <a class="dropdown-item" href="#">{{Marcos}}!</a>
+    <a class="dropdown-item" href="#">{{Ramona}}!</a>
+  </div>
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js"></script>
 
