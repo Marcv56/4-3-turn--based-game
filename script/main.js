@@ -44,8 +44,8 @@ let chooseFighter = (data) => {
 
 
 // trying to write a function to display the enemys health when fight button is pressed
-let p1Attack = (event) => {
-  console.log(Enemy);
+let p1Attack = (name) => {
+  console.log(Enemy.name.health);
 
   console.log("attack");
 }
