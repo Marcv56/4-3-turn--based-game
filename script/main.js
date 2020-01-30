@@ -1,5 +1,5 @@
 //class Player can account for both enemies and players as they have the same
-//base properties. 
+//base properties.
 
 class Player {
   constructor(name) {
@@ -29,10 +29,10 @@ class BTeam extends Player {
 
 }
 
-let rachel = {    //players can have preset key value pairs by making an object for each player
-  name: 'Rachel', //or by making an array of objects for all players
-  weapon: 'sword'
-}
+// let rachel = {    //players can have preset key value pairs by making an object for each player
+//   name: 'Rachel', //or by making an array of objects for all players
+//   weapon: 'sword'
+// }
 
 
 
@@ -44,10 +44,12 @@ let rachel = {    //players can have preset key value pairs by making an object 
 let chooseFighter = (data) => { //this function will fire on an event
   let source = $('#choose-player-template').html();
   let template = Handlebars.compile(source);
-  let context = data;//this will call on the constructor to create the player selected
+  let rachel = new Player();//this will call on the constructor to create the player selected
   let html = template(data);
   $('.dropdown').html(html);
 }
+
+let fighters = document.getElementById('dropdownMenuButton').addEventListener('click', chooseFighter);
 
 
 //////////////////////////////////////event listener for fight button
@@ -58,7 +60,7 @@ let p1Attack = (name) => {
 
 
   console.log("attack");
-  player
+
 }
 
 
