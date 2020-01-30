@@ -46,10 +46,10 @@ let chooseFighter = (data) => { //this function will fire on an event
   let template = Handlebars.compile(source);
   let rachel = new Player();//this will call on the constructor to create the player selected
   let html = template(data);
-  $('.dropdown').html(html);
+  $('.dropdown-menu').html(html);
 }
 
-let fighters = document.getElementById('dropdownMenuButton').addEventListener('click', chooseFighter);
+let fighters = document.querySelector('.dropdown').addEventListener('click', chooseFighter);
 
 
 //////////////////////////////////////event listener for fight button
