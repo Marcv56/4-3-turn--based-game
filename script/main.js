@@ -10,9 +10,9 @@ class Enemy {
 
 let javaScript = new Enemy()
 
-let css = new Enemy()
+let css = new Enemy();
 
-let boaConstructor = new Enemy()
+let boaConstructor = new Enemy();
 
 
 
@@ -25,9 +25,9 @@ class Player {
 
 let rachel = new Player()
 
-let marcos = new Player()
+let marcos = new Player();
 
-let ramona = new Player()
+let ramona = new Player();
 
 
 
