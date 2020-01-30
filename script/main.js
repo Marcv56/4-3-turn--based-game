@@ -3,7 +3,7 @@ console.log("hello");
 
 class Enemy {
   constructor(name) {
-
+    this.health = 100;
   }
 }
 
@@ -27,7 +27,7 @@ let BoaConstructor = new Enemy {
 
 class Player {
   constructor(name) {
-
+    this.health = 100;
   }
 }
 
