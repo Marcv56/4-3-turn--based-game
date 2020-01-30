@@ -41,9 +41,15 @@ let chooseFighter = (data) => {
 
 
 //////////////////////////////////////event listener for fight button
-// still needs function name beside click
 
-let p1Attack = () => {
+
+// trying to write a function to display the enemys health when fight button is pressed
+let p1Attack = (event) => {
+  console.log(Enemy);
+
   console.log("attack");
 }
+
+
+
 let fightButton = document.querySelector('.attack-button').addEventListener("click", p1Attack);
