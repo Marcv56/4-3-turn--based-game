@@ -25,6 +25,8 @@ class BTeam extends Player {
     this.name = config.name;
     this.weapon = config.weapon;
   }
+
+
 }
 
 let rachel = {    //players can have preset key value pairs by making an object for each player
@@ -53,7 +55,7 @@ let chooseFighter = (data) => { //this function will fire on an event
 
 // trying to write a function to display the enemys health when fight button is pressed
 let p1Attack = (name) => {
-  console.log(Enemy.name.health);
+
 
   console.log("attack");
   player
