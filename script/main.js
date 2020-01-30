@@ -7,11 +7,13 @@ class Enemy {
   }
 }
 
+
 let javaScript = new Enemy()
 
 let css = new Enemy()
 
 let boaConstructor = new Enemy()
+
 
 
 class Player {
@@ -20,11 +22,14 @@ class Player {
   }
 }
 
+
 let rachel = new Player()
 
 let marcos = new Player()
 
 let ramona = new Player()
+
+
 
 
 //////////////////////////////////////event listener for fight button
