@@ -65,24 +65,23 @@ let pearl = new Player({
 
 
 //************************Event Listeners for DropDown***************************
-
-
-
 let chooseFighter = (event) => {
-  if (event.target.value === 'rachel') {
-    rachel.status = 'active';
-    console.log(rachel);
-  } else if (event.target.value === 'marcos') {
-    marcus.status = 'active';
-    console.log(marcos);
-  } else if (event.target.value === 'ramona') {
-    marcus.status = 'active';
-    console.log(ramona);
+  if (event.target.alt === 'rachel') {
+    updateFighterHTML(rachel);
+  } else if (event.target.alt === 'marcos') {
+    updateFighterHTML(marcos);
+  } else if (event.target.alt === 'ramona') {
+    updateFighterHTML(ramona);
   }
+}
+
+let updateFighterHTML = (player) => {
+  // use a template to update your HTML
 }
 // let fighters = document.querySelectorAll('.dropdown-item').addEventListener('click', chooseFighter);
 let fighters = document.querySelectorAll('.dropdown-item');
-  fighters.forEach(function(){addEventListener('click', chooseFighter)});
+// fighters.forEach(function(){addEventListener('click', chooseFighter)});
+fighters.forEach((fighter) => fighter.addEventListener('click', chooseFighter));
 
 // *******************Trying to import constructor data into template**************
 //

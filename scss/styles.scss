@@ -1,7 +1,14 @@
 *{
  background-size: 100%;
  background-repeat: no-repeat;
- box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.dropdown-item {
+  width: 200px;
 }
 
 .player-1 {
