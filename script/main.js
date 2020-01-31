@@ -64,7 +64,7 @@ console.log(marcos);
 let fighters = document.querySelectorAll('.dropdown-item').addEventListener('click', chooseFighter);
 
 let chooseFighter = () => {
-  
+
 }
 
 
@@ -81,6 +81,7 @@ let chooseFighter = () => {
 // let fighters = document.querySelector('.dropdown').addEventListener('click', chooseFighter);
 
 
+
 //////////////////////////////////////event listener for fight button
 
 let attack = (event) => {
@@ -89,6 +90,12 @@ let attack = (event) => {
 }
 
 
+// trying to write a function to display the enemys health when fight button is pressed
+let p1Attack = (name) => {
+  console.log("attack");
+
+
+}
 
 
 
