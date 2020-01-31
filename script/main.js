@@ -20,9 +20,6 @@ class Enemy extends Player {
     super();
 
 
-
-
-
   }
 }
 
