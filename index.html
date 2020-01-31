@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>B-Team</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -16,12 +16,23 @@
   }
   </style>
 
-
-
-  <div class="container-fluid">
+  <div class="header container-fluid">
+    <div class="dropdown row">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      CHOOSE YOUR FIGHTER!
+    </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <button class="dropdown-item" type="button"><img src="images/pikachu.png" alt="rachel"></button>
+        <button class="dropdown-item" type="button"><img src="images/goku.jpeg" alt="marcos"></button>
+        <button class="dropdown-item" type="button"><img src="images/noodle.jpeg" alt="ramona"></button>
+        </div>
+  </div>
+</div>
+  <div class="players container-fluid">
     <div class="row">
 
       <div class="col-6 player">
+
       <div class="col player-1">
       </div>
       <button type="button" class="attack-button" value="fight">FIGHT</button>
@@ -29,15 +40,6 @@
 
       <div class="col-6 player">
         <div class="col player-2">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            CHOOSE YOUR FIGHTER!
-          </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <button class="dropdown-item" type="button"><img src="images/pikachu.png" alt="rachel"></button>
-              <button class="dropdown-item" type="button"><img src="images/goku.jpeg" alt="marcos"></button>
-              <button class="dropdown-item" type="button"><img src="images/noodle.jpeg" alt="ramona"></button>
-              </div>
           </div>
         </div>
       </div>
