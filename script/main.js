@@ -42,22 +42,26 @@ class BTeam extends Player {
 
 let ramona = new Player({
   name: 'Ramona',
-  weapon: 'Yo-Yo'
+  weapon: 'Yo-Yo',
+  value: 1
 });
 
 let rachel = new Player({
   name: 'Rachel',
-  weapon: 'mace'
+  weapon: 'mace',
+  value: 2
 });
 
 let marcos = new Player({
   name: 'Marcos',
-  weapon: 'axe body spray'
+  weapon: 'axe body spray',
+  value: 3
 });
 
 let pearl = new Player({
   name: 'Pearl',
-  weapon: 'shiny sword'
+  weapon: 'shiny sword',
+  value: 4
 });
 
 // console.log(rachel);
@@ -110,16 +114,12 @@ let attack = (event) => {
   rachel.attack(marcos);
   console.log(marcos);
   console.log(rachel);
-  console.log(rachel.status);
+  // console.log(rachel.status);
 }
 
 
 // trying to write a function to display the enemys health when fight button is pressed
-let p1Attack = (name) => {
-  console.log("attack");
 
-
-}
 
 
 
