@@ -10,7 +10,7 @@ class Player {
 
   attack (player) {
     player.health -= 5;
-    player.status = true;
+    // player.status = true;
   }
 }
 
@@ -68,10 +68,13 @@ let pearl = new Player({
 let chooseFighter = (event) => {
   if (event.target.alt === 'rachel') {
     updateFighterHTML(rachel);
+    rachel.status = 'active';
   } else if (event.target.alt === 'marcos') {
     updateFighterHTML(marcos);
+    marcos.status = 'active'
   } else if (event.target.alt === 'ramona') {
     updateFighterHTML(ramona);
+    ramona.status = 'active'
   }
 }
 
@@ -103,11 +106,7 @@ let attack = (event) => {
   rachel.attack(marcos);
   console.log(marcos);
   console.log(rachel);
-  // console.log(rachel.status);
 }
-
-
-// trying to write a function to display the enemys health when fight button is pressed
 
 
 
