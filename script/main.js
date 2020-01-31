@@ -37,7 +37,7 @@ class BTeam extends Player {
 
 }
 
-***************************BTEAM_PLAYERS_TO_CHOOSE_FROM*************************
+// ***************************BTEAM_PLAYERS_TO_CHOOSE_FROM*************************
 
 let ramona = new Player({
   name: 'Ramona',
