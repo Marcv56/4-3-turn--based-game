@@ -5,10 +5,12 @@ class Player {
   constructor(name) {
     this.health = 100;
     this.name = name;
+    this.status = null;
   }
 
   attack (player) {
     player.health -= 5;
+    player.status = true;
   }
 }
 
@@ -16,6 +18,10 @@ class Player {
 class Enemy extends Player {
   constructor(name) {
     super();
+
+
+
+
 
   }
 }
@@ -36,31 +42,28 @@ class BTeam extends Player {
 
 let ramona = new Player({
   name: 'Ramona',
-  weapon: 'Yo-Yo'
+  weapon: 'Yo-Yo',
+  value: 1
 });
 
 let rachel = new Player({
   name: 'Rachel',
-  weapon: 'sword'
+  weapon: 'mace',
+  value: 2
 });
 
 let marcos = new Player({
   name: 'Marcos',
-  weapon: 'axe body spray'
+  weapon: 'axe body spray',
+  value: 3
 });
 
-console.log(rachel);
-console.log(marcos);
 
-rachel.attack(marcos);
-
-console.log(rachel);
-console.log(marcos);
-
-// let rachel = {    //players can have preset key value pairs by making an object for each player
-//   name: 'Rachel', //or by making an array of objects for all players
-//   weapon: 'sword'
-// }
+let pearl = new Player({
+  name: 'Pearl',
+  weapon: 'shiny sword',
+  value: 4
+});
 
 
 
@@ -73,11 +76,13 @@ let chooseFighter = (event) => {
     console.log(rachel);
   } else if (event.target.value === 'marcos') {
     console.log(marcos);
-  } else console.log(ramona);
+  } else if (event.target.value === 'ramona') {
+    console.log(ramona);
+  }
 }
 // let fighters = document.querySelectorAll('.dropdown-item').addEventListener('click', chooseFighter);
 let fighters = document.querySelectorAll('.dropdown-item');
-  fighters.forEach(function(){addEventListener('click', chooseFighter)})
+  fighters.forEach(function(){addEventListener('click', chooseFighter)});
 
 // *******************Trying to import constructor data into template**************
 //
@@ -98,14 +103,12 @@ let fighters = document.querySelectorAll('.dropdown-item');
 let attack = (event) => {
   rachel.attack(marcos);
   console.log(marcos);
+  console.log(rachel);
+  // console.log(rachel.status);
 }
 
 
 // trying to write a function to display the enemys health when fight button is pressed
-
-
-
-
 
 
 
