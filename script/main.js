@@ -77,9 +77,4 @@ let fighters = document.querySelector('.dropdown').addEventListener('click', cho
 //////////////////////////////////////event listener for fight button
 
 
-
-
-
-
-
-// let fightButton = document.querySelector('.attack-button').addEventListener("click", attack);
+let fightButton = document.querySelector('.attack-button').addEventListener("click", attack);
