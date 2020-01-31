@@ -73,10 +73,13 @@ let pearl = new Player({
 
 let chooseFighter = (event) => {
   if (event.target.value === 'rachel') {
+    rachel.status = 'active';
     console.log(rachel);
   } else if (event.target.value === 'marcos') {
+    marcus.status = 'active';
     console.log(marcos);
   } else if (event.target.value === 'ramona') {
+    marcus.status = 'active';
     console.log(ramona);
   }
 }
