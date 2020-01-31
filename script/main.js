@@ -59,20 +59,26 @@ console.log(marcos);
 
 
 
+//************************Event Listeners for DropDown***************************
 
+let fighters = document.querySelectorAll('.dropdown-item').addEventListener('click', chooseFighter);
+
+let chooseFighter = () => {
+  
+}
 
 
 // *******************Trying to import constructor data into template**************
+//
+// let chooseFighter = (data) => { //this function will fire on an event
+//   let source = $('#choose-player-template').html();
+//   let template = Handlebars.compile(source);
+//   let ramona = new Player();//this will call on the constructor to create the player selected
+//   let html = template(data);
+//   $('.dropdown-menu').html(html);
+// }
 
-let chooseFighter = (data) => { //this function will fire on an event
-  let source = $('#choose-player-template').html();
-  let template = Handlebars.compile(source);
-  let ramona = new Player();//this will call on the constructor to create the player selected
-  let html = template(data);
-  $('.dropdown-menu').html(html);
-}
-
-let fighters = document.querySelector('.dropdown').addEventListener('click', chooseFighter);
+// let fighters = document.querySelector('.dropdown').addEventListener('click', chooseFighter);
 
 
 //////////////////////////////////////event listener for fight button
