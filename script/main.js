@@ -37,6 +37,8 @@ class BTeam extends Player {
 
 }
 
+***************************BTEAM_PLAYERS_TO_CHOOSE_FROM*************************
+
 let ramona = new Player({
   name: 'Ramona',
   weapon: 'Yo-Yo',
@@ -61,6 +63,26 @@ let pearl = new Player({
   weapon: 'shiny sword',
   value: 4
 });
+
+// ********************RANDOMLY_SELECTED_VILLIANS***********************************
+
+let theHand = new Enemy({
+    name: 'Hand',
+    weapon: 'IndexFinger',
+    value: 0 //this value will be randomly selected in JS by math.random()
+})
+
+let donkeyKong = new Enemy({
+    name: 'DK',
+    weapon: 'SmashArm',
+    value: 0.3
+})
+
+let polyGon = new Enemy({
+    name: 'polyGon',
+    weapon: 'polyGuns',
+    value: 0.5
+})
 
 let selectedPlayer;
 let selectedVillain;
