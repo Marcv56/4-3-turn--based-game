@@ -75,25 +75,30 @@ let theHand = new Enemy({
 let donkeyKong = new Enemy({
     name: 'DK',
     weapon: 'SmashArm',
-    value: 0.3
+    value: 2
 })
 
 let polyGon = new Enemy({
     name: 'polyGon',
     weapon: 'polyGuns',
-    value: 0.5
+    value: 1
 })
 
 let selectedPlayer;
 let selectedVillain;
+let chooseVillian = () => {
+  return Math.floor(Math.random() * Math.floor(max));//returns 0, 1, or 3;
+}
 
 //************************Event Listeners for DropDown***************************
 let chooseFighter = (event) => {
   if (event.target.alt === 'rachel') {
-    selectedPlayer = rachel;
+    selectedPlayer = rachel; //should also randomly select a villian here********
     updateFighterHTML(rachel);
     rachel.status = 'active';
     console.log(rachel);
+    selectedVillian = Enemy.chooseVillian();
+    console.log(selectedVillian);
   } else if (event.target.alt === 'marcos') {
     selectedPlayer = marcos;
     updateFighterHTML(marcos);
