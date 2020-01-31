@@ -34,6 +34,11 @@ class BTeam extends Player {
 
 }
 
+let ramona = new Player({
+  name: 'Ramona',
+  weapon: 'Yo-Yo'
+});
+
 let rachel = new Player({
   name: 'Rachel',
   weapon: 'sword'
@@ -61,12 +66,18 @@ console.log(marcos);
 
 //************************Event Listeners for DropDown***************************
 
-let fighters = document.querySelectorAll('.dropdown-item').addEventListener('click', chooseFighter);
 
-let chooseFighter = () => {
 
+let chooseFighter = (event) => {
+  if (event.target.value === 'rachel') {
+    console.log(rachel);
+  } else if (event.target.value === 'marcos') {
+    console.log(marcos);
+  } else console.log(ramona);
 }
-
+// let fighters = document.querySelectorAll('.dropdown-item').addEventListener('click', chooseFighter);
+let fighters = document.querySelectorAll('.dropdown-item');
+  fighters.forEach(function(){addEventListener('click', chooseFighter)})
 
 // *******************Trying to import constructor data into template**************
 //
