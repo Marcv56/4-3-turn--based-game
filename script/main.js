@@ -62,19 +62,26 @@ let pearl = new Player({
   value: 4
 });
 
-
+let selectedPlayer;
+let selectedVillain;
 
 //************************Event Listeners for DropDown***************************
 let chooseFighter = (event) => {
   if (event.target.alt === 'rachel') {
+    selectedPlayer = rachel;
     updateFighterHTML(rachel);
     rachel.status = 'active';
+    console.log(rachel);
   } else if (event.target.alt === 'marcos') {
+    selectedPlayer = marcos;
     updateFighterHTML(marcos);
     marcos.status = 'active'
+    console.log(marcos);
   } else if (event.target.alt === 'ramona') {
+    selectedPlayer = ramona;
     updateFighterHTML(ramona);
     ramona.status = 'active'
+    console.log(ramona);
   }
 }
 
@@ -101,9 +108,13 @@ fighters.forEach((fighter) => fighter.addEventListener('click', chooseFighter));
 
 
 //////////////////////////////////////event listener for fight button
+// selectedPlayer.attack(selectedVillain);
+//
+// selectedVillain.attack(selectedPlayer);
+
 
 let attack = (event) => {
-  rachel.attack(marcos);
+  selectedPlayer.attack(selectedVillian);
   console.log(marcos);
   console.log(rachel);
 }
