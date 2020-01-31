@@ -4,6 +4,7 @@
 class Player {
   constructor(name) {
     this.health = 100;
+    this.name = name;
   }
 
   attack (player) {
@@ -66,7 +67,7 @@ console.log(marcos);
 let chooseFighter = (data) => { //this function will fire on an event
   let source = $('#choose-player-template').html();
   let template = Handlebars.compile(source);
-  let rachel = new Player();//this will call on the constructor to create the player selected
+  let ramona = new Player();//this will call on the constructor to create the player selected
   let html = template(data);
   $('.dropdown-menu').html(html);
 }
@@ -75,6 +76,14 @@ let fighters = document.querySelector('.dropdown').addEventListener('click', cho
 
 
 //////////////////////////////////////event listener for fight button
+
+let attack = (event) => {
+  rachel.attack(marcos);
+  console.log(marcos);
+}
+
+
+
 
 
 let fightButton = document.querySelector('.attack-button').addEventListener("click", attack);
