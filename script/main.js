@@ -58,27 +58,12 @@ let marcos = new Player({
   value: 3
 });
 
-<<<<<<< HEAD
+
 let pearl = new Player({
   name: 'Pearl',
   weapon: 'shiny sword',
   value: 4
 });
-
-=======
->>>>>>> got 'ramona' data to stop console logging when anywhere on the page was clicked
-// console.log(rachel);
-// console.log(marcos);
-//
-// rachel.attack(marcos);
-//
-// console.log(rachel);
-// console.log(marcos);
-
-// let rachel = {    //players can have preset key value pairs by making an object for each player
-//   name: 'Rachel', //or by making an array of objects for all players
-//   weapon: 'sword'
-// }
 
 
 
@@ -124,13 +109,7 @@ let attack = (event) => {
 
 
 // trying to write a function to display the enemys health when fight button is pressed
-<<<<<<< HEAD
 
-
-=======
-
-
->>>>>>> got 'ramona' data to stop console logging when anywhere on the page was clicked
 
 
 let fightButton = document.querySelector('.attack-button').addEventListener("click", attack);
