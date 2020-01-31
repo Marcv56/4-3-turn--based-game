@@ -5,10 +5,12 @@ class Player {
   constructor(name) {
     this.health = 100;
     this.name = name;
+    this.status = null;
   }
 
   attack (player) {
     player.health -= 5;
+    player.status = true;
   }
 }
 
@@ -16,6 +18,10 @@ class Player {
 class Enemy extends Player {
   constructor(name) {
     super();
+
+
+
+
 
   }
 }
@@ -41,7 +47,7 @@ let ramona = new Player({
 
 let rachel = new Player({
   name: 'Rachel',
-  weapon: 'sword'
+  weapon: 'mace'
 });
 
 let marcos = new Player({
@@ -49,13 +55,18 @@ let marcos = new Player({
   weapon: 'axe body spray'
 });
 
-console.log(rachel);
-console.log(marcos);
+let pearl = new Player({
+  name: 'Pearl',
+  weapon: 'shiny sword'
+});
 
-rachel.attack(marcos);
-
-console.log(rachel);
-console.log(marcos);
+// console.log(rachel);
+// console.log(marcos);
+//
+// rachel.attack(marcos);
+//
+// console.log(rachel);
+// console.log(marcos);
 
 // let rachel = {    //players can have preset key value pairs by making an object for each player
 //   name: 'Rachel', //or by making an array of objects for all players
@@ -98,6 +109,8 @@ let fighters = document.querySelectorAll('.dropdown-item');
 let attack = (event) => {
   rachel.attack(marcos);
   console.log(marcos);
+  console.log(rachel);
+  console.log(rachel.status);
 }
 
 
