@@ -58,12 +58,15 @@ let marcos = new Player({
   value: 3
 });
 
+<<<<<<< HEAD
 let pearl = new Player({
   name: 'Pearl',
   weapon: 'shiny sword',
   value: 4
 });
 
+=======
+>>>>>>> got 'ramona' data to stop console logging when anywhere on the page was clicked
 // console.log(rachel);
 // console.log(marcos);
 //
@@ -88,11 +91,13 @@ let chooseFighter = (event) => {
     console.log(rachel);
   } else if (event.target.value === 'marcos') {
     console.log(marcos);
-  } else console.log(ramona);
+  } else if (event.target.value === 'ramona') {
+    console.log(ramona);
+  }
 }
 // let fighters = document.querySelectorAll('.dropdown-item').addEventListener('click', chooseFighter);
 let fighters = document.querySelectorAll('.dropdown-item');
-  fighters.forEach(function(){addEventListener('click', chooseFighter)})
+  fighters.forEach(function(){addEventListener('click', chooseFighter)});
 
 // *******************Trying to import constructor data into template**************
 //
@@ -119,8 +124,13 @@ let attack = (event) => {
 
 
 // trying to write a function to display the enemys health when fight button is pressed
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> got 'ramona' data to stop console logging when anywhere on the page was clicked
 
 
 let fightButton = document.querySelector('.attack-button').addEventListener("click", attack);
