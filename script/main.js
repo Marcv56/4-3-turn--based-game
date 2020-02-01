@@ -18,6 +18,8 @@ class Player {
 class Enemy extends Player {
   constructor(name) {
     super();
+    this.name = name;
+    this.status = null;
 
 
   }
@@ -64,6 +66,7 @@ let pearl = new Player({
   value: 4
 });
 
+
 // ********************RANDOMLY_SELECTED_VILLIANS***********************************
 
 let theHand = new Enemy({
@@ -86,9 +89,49 @@ let polyGon = new Enemy({
 
 let selectedPlayer;
 let selectedVillain;
-let chooseVillian = () => {
-  return Math.floor(Math.random() * Math.floor(max));//returns 0, 1, or 3;
+// let chooseVillian = () => {
+//   let randomValue = Math.floor(Math.random() * Math.floor(3));//returns 0, 1, or 2;
+//   console.log(randomVillian);
+// }
+//
+// chooseVillian();
+
+//*************************EVENTLISTENERFORSTARTBUTTON***************************
+
+let chooseEnemy = (event) => {
+  let randomValue = Math.floor(Math.random() * Math.floor(3));
+  if (randomValue === 0) {
+    selectedVillian = theHand;
+    console.log(selectedVillian);
+  } else if (randomValue === 1) {
+    selectedVillian = polyGon;
+    console.log(selectedVillian);
+  } else if (randomValue === 2) {
+    selectedVillian = donkeyKong;
+    console.log(selectedVillian);
+  }
 }
+      // if randomValue ===
+//     updateFighterHTML(rachel);
+//     rachel.status = 'active';
+//     console.log(rachel);
+//
+//   } else if (event.target.alt === 'marcos') {
+//     selectedPlayer = marcos;
+//     updateFighterHTML(marcos);
+//     marcos.status = 'active'
+//     console.log(marcos);
+//   } else if (event.target.alt === 'ramona') {
+//     selectedPlayer = ramona;
+//     updateFighterHTML(ramona);
+//     ramona.status = 'active'
+//     console.log(ramona);
+//   }
+//   console.log()
+// }
+let goButton = document.querySelector('.start-button').addEventListener('click', chooseEnemy);
+
+
 
 //************************Event Listeners for DropDown***************************
 let chooseFighter = (event) => {
@@ -97,8 +140,6 @@ let chooseFighter = (event) => {
     updateFighterHTML(rachel);
     rachel.status = 'active';
     console.log(rachel);
-    selectedVillian = 
-    console.log(selectedVillian);
   } else if (event.target.alt === 'marcos') {
     selectedPlayer = marcos;
     updateFighterHTML(marcos);
@@ -110,15 +151,30 @@ let chooseFighter = (event) => {
     ramona.status = 'active'
     console.log(ramona);
   }
+  console.log()
 }
 
+
 let updateFighterHTML = (player) => {
+  var playerName = player.name.name
+  document.getElementById('myImg').src = "images/" + playerName + ".jpeg"
+  console.log("you picked", playerName)
+
   // use a template to update your HTML
 }
 // let fighters = document.querySelectorAll('.dropdown-item').addEventListener('click', chooseFighter);
 let fighters = document.querySelectorAll('.dropdown-item');
 // fighters.forEach(function(){addEventListener('click', chooseFighter)});
 fighters.forEach((fighter) => fighter.addEventListener('click', chooseFighter));
+
+//this is to have the characters show on screen when selected
+
+
+
+
+
+
+
 
 // *******************Trying to import constructor data into template**************
 //
