@@ -219,12 +219,33 @@ fighters.forEach((fighter) => fighter.addEventListener('click', chooseFighter));
 
 
 let attack = (event) => {
+
+  // you attack enemy
   selectedPlayer.attack(selectedVillian);
+
+  //enemy attacks back
   selectedVillian.attack(selectedPlayer);
+
+
   // setTimeout((selectedVillian.attack(selectedPlayer)),5000);
   console.log(selectedPlayer);
   console.log(selectedVillian);
+
+  if(selectedPlayer.health <= 0){
+    console.log("You Lose");
+  }
+  else if (selectedVillian.health <= 0){
+    console.log("You Win");
+  }
 }
+
+// let attackBack = () => {
+//
+// }
+
+
+
+
 
 
 
