@@ -1,26 +1,10 @@
 *{
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url('images/background 2.gif');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom;
+ background-size: 100%;
+ background-repeat: no-repeat;
 }
 
 img {
   width: 100%;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-}
-
-.players {
-  display: flex;
-  justify-content: center;
 }
 
 .dropdown-item {
@@ -29,17 +13,24 @@ img {
 }
 
 .player-1 {
-  border: 5px solid grey;
-  height: 80vh;
-  width: 40vw;
+  // background-color: grey;
+  height: 75vh;
+  width: 100%;
+background-repeat: no-repeat;
 }
 
 .player-2 {
-  border: 5px solid #45b6fe;
-  height: 80vh;
-  width: 40vw;
-}
+  // background-color: #45b6fe;
+  height: 75vh;
+  width: 100%;
 
+}
+#playerLeft {
+  background: rgba(255, 255, 255, 0.25);
+}
+#playerRight {
+  background: rgba(255, 255, 255, 0.25);
+}
 // #myImg2 {
 //   display: none;
 // }
