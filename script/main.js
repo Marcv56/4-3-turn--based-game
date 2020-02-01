@@ -172,7 +172,11 @@ let choose = document.getElementById('chooseChar');
 let charChoice = document.getElementById('dropdownMenuButton')
 charChoice.addEventListener('click', chooseYourChar);
 let fighters = document.querySelectorAll('.dropdown-item');
+
 let gameMsg = document.getElementById('game-msg');
+
+
+
 
 let attack = (event) => {
 
@@ -196,15 +200,32 @@ let attack = (event) => {
 
 
   if(selectedPlayer.health <= 0){
+    document.getElementById('restart-button').hidden = false;
     console.log("You Lose");
     gameMsg.innerHTML = 'You Lost!';
     charChoice.style.display = 'none';
   }
   else if (selectedVillian.health <= 0){
+    document.getElementById('restart-button').hidden = false;
     console.log("You Win");
     gameMsg.innerHTML = 'You Won!';
     charChoice.style.display = 'none';
   }
 }
 
+
+
 let fightButton = document.querySelector('.attack-button').addEventListener("click", attack);
+
+
+
+const restart = () => { //restarts game when either player wins or loses
+let attackButton = document.getElementById('attack-button');
+  player.health = 100;
+  opponet.health = 100;
+  // document.getElementById('game-message').innerText = "";
+  attackButton.disabled = false;
+  attackButton.hidden = false;
+  document.getElementById('restart-button').hidden = true;
+ printToScreen ();
+}
