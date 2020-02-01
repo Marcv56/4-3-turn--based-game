@@ -8,12 +8,17 @@
 //   height: 80vh;
 // }
 
+#game-msg {
+  display: none;
+}
+
 .start-button {
   align-self: left;
 }
 
 .dropdown-item {
   width: 200px;
+  display: block;
 
 }
 
