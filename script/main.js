@@ -125,24 +125,7 @@ let updateEnemyHTML = (enemy) => {
   console.log("fight", enemyName)
 }
 
-      // if randomValue ===
-//     updateFighterHTML(rachel);
-//     rachel.status = 'active';
-//     console.log(rachel);
-//
-//   } else if (event.target.alt === 'marcos') {
-//     selectedPlayer = marcos;
-//     updateFighterHTML(marcos);
-//     marcos.status = 'active'
-//     console.log(marcos);
-//   } else if (event.target.alt === 'ramona') {
-//     selectedPlayer = ramona;
-//     updateFighterHTML(ramona);
-//     ramona.status = 'active'
-//     console.log(ramona);
-//   }
-//   console.log()
-// }
+
 let goButton = document.querySelector('.start-button').addEventListener('click', chooseEnemy);
 
 
@@ -230,7 +213,6 @@ let attack = (event) => {
   selectedVillian.attack(selectedPlayer);
 
 
-  // setTimeout((selectedVillian.attack(selectedPlayer)),5000);
   console.log(selectedPlayer);
   console.log(selectedVillian);
 
