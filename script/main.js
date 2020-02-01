@@ -178,13 +178,21 @@ let attack = (event) => {
 
   // you attack enemy
   selectedPlayer.attack(selectedVillian);
+  let playerHealth = selectedPlayer.health;
+
+    let width = playerHealth
+    let pixel = width + "%";
+
+    document.querySelector(".player-health-bar").style.width = pixel;
+  // document.querySelector(".player-health").innerHTML = playerHealth;
+
 
   //enemy attacks back
   selectedVillian.attack(selectedPlayer);
 
 
-  console.log(selectedPlayer);
-  console.log(selectedVillian);
+  // console.log(selectedPlayer);
+  // console.log(selectedVillian);
 
 
   if(selectedPlayer.health <= 0){
