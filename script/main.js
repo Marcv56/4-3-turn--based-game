@@ -202,7 +202,8 @@ let attack = (event) => {
   }
   else if (selectedVillian.health <= 0){
     console.log("You Win");
-    gameMsg.innerHTML = 'You Won!'
+    gameMsg.innerHTML = 'You Won!';
+    charChoice.style.display = 'none';
   }
 }
 
