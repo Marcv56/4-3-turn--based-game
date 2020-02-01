@@ -180,7 +180,7 @@ let attack = (event) => {
   selectedPlayer.attack(selectedVillian);
   let playerHealth = selectedPlayer.health;
 
-    let width = playerHealth
+    let width = playerHealth;
     let pixel = width + "%";
 
     document.querySelector(".player-health-bar").style.width = pixel;
@@ -197,7 +197,7 @@ let attack = (event) => {
 
   if(selectedPlayer.health <= 0){
     console.log("You Lose");
-    gameMsg.innerHTML = 'You Lost!'
+    gameMsg.innerHTML = 'You Lost!';
     charChoice.style.display = 'none';
   }
   else if (selectedVillian.health <= 0){
