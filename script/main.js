@@ -1,6 +1,7 @@
 //class Player can account for both enemies and players as they have the same
 //base properties.
 
+
 class Player {
   constructor(name) {
     this.health = 100;
@@ -163,7 +164,8 @@ let chooseFighter = (event) => {
     ramona.status = 'active'
     console.log(ramona);
   }
-  console.log()
+  stageMusic = document.getElementById('background-music');
+  stageMusic.play()
 }
 
 
