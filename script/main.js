@@ -120,7 +120,8 @@ let chooseEnemy = (event) => {
 
 let updateEnemyHTML = (enemy) => {
   var enemyName = enemy.name.name
-  document.getElementById('myEnemyImg').src = "images/" + enemyName + ".jpeg"
+  document.getElementById('playerRight').style.background =  'url(images/' + enemyName + '.jpeg) no-repeat';
+
   console.log("fight", enemyName)
 }
 
