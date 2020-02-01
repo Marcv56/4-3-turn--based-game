@@ -171,7 +171,7 @@ let chooseYourChar = (event) => {
 let choose = document.getElementById('chooseChar');
 let charChoice = document.getElementById('dropdownMenuButton').addEventListener('click', chooseYourChar);
 let fighters = document.querySelectorAll('.dropdown-item');
-
+let gameMsg = document.getElementById('game-msg');
 
 let attack = (event) => {
 
@@ -187,9 +187,12 @@ let attack = (event) => {
 
   if(selectedPlayer.health <= 0){
     console.log("You Lose");
+    gameMsg.innerHTML = 'You Lost!'
+    
   }
   else if (selectedVillian.health <= 0){
     console.log("You Win");
+    gameMsg.innerHTML = 'You Won!'
   }
 }
 

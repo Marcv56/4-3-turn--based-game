@@ -20,6 +20,7 @@
   </style>
 
   <div class="header container-fluid">
+    <h1 id="game-msg"></h1>
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       CHOOSE YOUR FIGHTER!
@@ -29,8 +30,8 @@
         <button class="dropdown-item" onclick=chooseFighter(event) type="button"><img src="images/Marcos.jpeg" alt="marcos"></button>
         <button class="dropdown-item" onclick=chooseFighter(event) type="button"><img src="images/Ramona.jpeg" alt="ramona"></button>
         </div>
+        <button type="button" class="start-button" value="start">GO!</button>
   </div>
-
   <div class="characters">
   </div>
 </div>
@@ -41,9 +42,10 @@
         <div id="playerLeft" class="col player-1"></div>
         <button type="button" class="attack-button" value="fight">FIGHT</button>
       </div>
+
       <div class="col-6 player">
         <div id="playerRight" class="col player-2"></div>
-        <button type="button" class="start-button" value="start">GO!</button>
+
       </div>
     </div>
   </div>
