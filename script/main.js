@@ -171,37 +171,6 @@ let chooseYourChar = (event) => {
 let choose = document.getElementById('chooseChar');
 let charChoice = document.getElementById('dropdownMenuButton').addEventListener('click', chooseYourChar);
 let fighters = document.querySelectorAll('.dropdown-item');
-// fighters.forEach(function(){addEventListener('click', chooseFighter)});
-// fighters.forEach((fighter) => fighter.addEventListener('click', chooseFighter));
-
-//this is to have the characters show on screen when selected
-
-
-
-
-
-
-
-
-// *******************Trying to import constructor data into template**************
-//
-// let chooseFighter = (data) => { //this function will fire on an event
-//   let source = $('#choose-player-template').html();
-//   let template = Handlebars.compile(source);
-//   let ramona = new Player();//this will call on the constructor to create the player selected
-//   let html = template(data);
-//   $('.dropdown-menu').html(html);
-// }
-
-// let fighters = document.querySelector('.dropdown').addEventListener('click', chooseFighter);
-
-
-
-//////////////////////////////////////event listener for fight button
-// selectedPlayer.attack(selectedVillain);
-//
-// selectedVillain.attack(selectedPlayer);
-
 
 
 let attack = (event) => {
@@ -223,15 +192,5 @@ let attack = (event) => {
     console.log("You Win");
   }
 }
-
-// let attackBack = () => {
-//
-// }
-
-
-
-
-
-
 
 let fightButton = document.querySelector('.attack-button').addEventListener("click", attack);
