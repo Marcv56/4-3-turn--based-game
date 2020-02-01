@@ -172,8 +172,10 @@ let chooseFighter = (event) => {
 
 let updateFighterHTML = (player) => {
   var playerName = player.name.name
-  document.getElementById('myImg').src = "images/" + playerName + ".jpeg"
+  document.getElementById('playerLeft').style.background =  'url(images/' + playerName + '.jpeg) no-repeat';
+
   console.log("you picked", playerName)
+  // document.getElementById('playerLeft').style.background =""
 
   // use a template to update your HTML
 }
@@ -186,7 +188,7 @@ let choose = document.getElementById('chooseChar');
 let charChoice = document.getElementById('dropdownMenuButton').addEventListener('click', chooseYourChar);
 let fighters = document.querySelectorAll('.dropdown-item');
 // fighters.forEach(function(){addEventListener('click', chooseFighter)});
-fighters.forEach((fighter) => fighter.addEventListener('click', chooseFighter));
+// fighters.forEach((fighter) => fighter.addEventListener('click', chooseFighter));
 
 //this is to have the characters show on screen when selected
 
