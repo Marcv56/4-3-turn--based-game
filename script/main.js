@@ -64,6 +64,7 @@ let pearl = new Player({
   value: 4
 });
 
+
 // ********************RANDOMLY_SELECTED_VILLIANS***********************************
 
 let theHand = new Enemy({
@@ -90,6 +91,7 @@ let chooseVillian = () => {
   return Math.floor(Math.random() * Math.floor(max));//returns 0, 1, or 3;
 }
 
+
 //************************Event Listeners for DropDown***************************
 let chooseFighter = (event) => {
   if (event.target.alt === 'rachel') {
@@ -97,9 +99,10 @@ let chooseFighter = (event) => {
     updateFighterHTML(rachel);
     rachel.status = 'active';
     console.log(rachel);
-    selectedVillian =
-    console.log(selectedVillian);
-  } else if (event.target.alt === 'marcos') {
+
+
+  }
+  else if (event.target.alt === 'marcos') {
     selectedPlayer = marcos;
     updateFighterHTML(marcos);
     marcos.status = 'active'
@@ -112,13 +115,27 @@ let chooseFighter = (event) => {
   }
 }
 
+
 let updateFighterHTML = (player) => {
+  var playerName = player.name.name
+  document.getElementById('myImg').src = "images/" + playerName + ".jpeg"
+  console.log("you picked", playerName)
+
   // use a template to update your HTML
 }
 // let fighters = document.querySelectorAll('.dropdown-item').addEventListener('click', chooseFighter);
 let fighters = document.querySelectorAll('.dropdown-item');
 // fighters.forEach(function(){addEventListener('click', chooseFighter)});
 fighters.forEach((fighter) => fighter.addEventListener('click', chooseFighter));
+
+//this is to have the characters show on screen when selected
+
+
+
+
+
+
+
 
 // *******************Trying to import constructor data into template**************
 //
