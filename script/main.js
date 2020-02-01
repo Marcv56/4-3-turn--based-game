@@ -69,9 +69,9 @@ let pearl = new Player({
 
 // ********************RANDOMLY_SELECTED_VILLIANS***********************************
 
-let theHand = new Enemy({
-    name: 'Hand',
-    weapon: 'IndexFinger',
+let mario = new Enemy({
+    name: 'Mario',
+    weapon: 'pipe',
     value: 0 //this value will be randomly selected in JS by math.random()
 })
 
@@ -81,8 +81,8 @@ let donkeyKong = new Enemy({
     value: 2
 })
 
-let polyGon = new Enemy({
-    name: 'polyGon',
+let cptFalcon = new Enemy({
+    name: 'cptFalcon',
     weapon: 'polyGuns',
     value: 1
 })
@@ -101,16 +101,29 @@ let selectedVillain;
 let chooseEnemy = (event) => {
   let randomValue = Math.floor(Math.random() * Math.floor(3));
   if (randomValue === 0) {
-    selectedVillian = theHand;
+    selectedVillian = mario;
     console.log(selectedVillian);
+    updateEnemyHTML(selectedVillian);
+    selectedVillian.status = 'active'
   } else if (randomValue === 1) {
-    selectedVillian = polyGon;
+    selectedVillian = cptFalcon;
     console.log(selectedVillian);
+    updateEnemyHTML(selectedVillian);
+    selectedVillian.status = 'active'
   } else if (randomValue === 2) {
     selectedVillian = donkeyKong;
     console.log(selectedVillian);
+    updateEnemyHTML(selectedVillian);
+    selectedVillian.status = 'active'
   }
 }
+
+let updateEnemyHTML = (enemy) => {
+  var enemyName = enemy.name.name
+  document.getElementById('myEnemyImg').src = "images/" + enemyName + ".jpeg"
+  console.log("fight", enemyName)
+}
+
       // if randomValue ===
 //     updateFighterHTML(rachel);
 //     rachel.status = 'active';
