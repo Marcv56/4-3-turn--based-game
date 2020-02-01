@@ -17,17 +17,21 @@
   </style>
 
   <div class="header container-fluid">
-    <div class="dropdown row">
+    <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       CHOOSE YOUR FIGHTER!
     </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <button class="dropdown-item" type="button"><img src="images/pikachu.png" alt="rachel"></button>
-        <button class="dropdown-item" type="button"><img src="images/goku.jpeg" alt="marcos"></button>
-        <button class="dropdown-item" type="button"><img src="images/noodle.jpeg" alt="ramona"></button>
+        <button class="dropdown-item" onclick=chooseFighter(event) type="button"><img src="images/Rachel.jpeg" alt="rachel"></button>
+        <button class="dropdown-item" onclick=chooseFighter(event) type="button"><img src="images/Marcos.jpeg" alt="marcos"></button>
+        <button class="dropdown-item" onclick=chooseFighter(event) type="button"><img src="images/Ramona.jpeg" alt="ramona"></button>
         </div>
   </div>
+  <div class="characters">
+  <img id="myImg" src="" alt="char">
+  </div>
 </div>
+
   <div class="players container-fluid">
     <div class="row">
 
@@ -40,26 +44,11 @@
 
       <div class="col-6 player">
         <div class="col player-2">
-
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            CHOOSE YOUR FIGHTER!
-          </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <button class="dropdown-item" onclick=chooseFighter(event) type="button"><img src="images/Rachel.jpeg" alt="rachel"></button>
-              <button class="dropdown-item" onclick=chooseFighter(event) type="button"><img src="images/Marcos.jpeg" alt="marcos"></button>
-              <button class="dropdown-item" onclick=chooseFighter(event) type="button"><img src="images/Ramona.jpeg" alt="ramona"></button>
-              </div>
-
           </div>
         </div>
       </div>
 
-<div class="characters">
-<img id="myImg" src="" alt="char">
- <!-- <img id="myImg2" src="images/goku.jpeg" alt="marcos">
-<img id="myImg3" src="images/noodle.jpeg" alt="ramona"> -->
-</div>
+
 
 
 
