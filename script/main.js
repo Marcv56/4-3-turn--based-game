@@ -97,7 +97,7 @@ let chooseFighter = (event) => {
     updateFighterHTML(rachel);
     rachel.status = 'active';
     console.log(rachel);
-    selectedVillian = 
+    selectedVillian =
     console.log(selectedVillian);
   } else if (event.target.alt === 'marcos') {
     selectedPlayer = marcos;
