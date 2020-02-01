@@ -172,7 +172,6 @@ let choose = document.getElementById('chooseChar');
 let charChoice = document.getElementById('dropdownMenuButton')
 charChoice.addEventListener('click', chooseYourChar);
 let fighters = document.querySelectorAll('.dropdown-item');
-
 let gameMsg = document.getElementById('game-msg');
 
 
