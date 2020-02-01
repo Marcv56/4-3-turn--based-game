@@ -18,6 +18,8 @@ class Player {
 class Enemy extends Player {
   constructor(name) {
     super();
+    this.name = name;
+    this.status = null;
 
 
   }
@@ -87,9 +89,48 @@ let polyGon = new Enemy({
 
 let selectedPlayer;
 let selectedVillain;
-let chooseVillian = () => {
-  return Math.floor(Math.random() * Math.floor(max));//returns 0, 1, or 3;
+// let chooseVillian = () => {
+//   let randomValue = Math.floor(Math.random() * Math.floor(3));//returns 0, 1, or 2;
+//   console.log(randomVillian);
+// }
+//
+// chooseVillian();
+
+//*************************EVENTLISTENERFORSTARTBUTTON***************************
+
+let chooseEnemy = (event) => {
+  let randomValue = Math.floor(Math.random() * Math.floor(3));
+  if (randomValue === 0) {
+    selectedVillian = theHand;
+    console.log(selectedVillian);
+  } else if (randomValue === 1) {
+    selectedVillian = polyGon;
+    console.log(selectedVillian);
+  } else if (randomValue === 2) {
+    selectedVillian = donkeyKong;
+    console.log(selectedVillian);
+  }
 }
+      // if randomValue ===
+//     updateFighterHTML(rachel);
+//     rachel.status = 'active';
+//     console.log(rachel);
+//
+//   } else if (event.target.alt === 'marcos') {
+//     selectedPlayer = marcos;
+//     updateFighterHTML(marcos);
+//     marcos.status = 'active'
+//     console.log(marcos);
+//   } else if (event.target.alt === 'ramona') {
+//     selectedPlayer = ramona;
+//     updateFighterHTML(ramona);
+//     ramona.status = 'active'
+//     console.log(ramona);
+//   }
+//   console.log()
+// }
+let goButton = document.querySelector('.start-button').addEventListener('click', chooseEnemy);
+
 
 
 //************************Event Listeners for DropDown***************************
@@ -113,6 +154,7 @@ let chooseFighter = (event) => {
     ramona.status = 'active'
     console.log(ramona);
   }
+  console.log()
 }
 
 
