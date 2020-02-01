@@ -148,6 +148,7 @@ let goButton = document.querySelector('.start-button').addEventListener('click',
 
 //************************Event Listeners for DropDown***************************
 let chooseFighter = (event) => {
+
   if (event.target.alt === 'rachel') {
     selectedPlayer = rachel; //should also randomly select a villian here********
     updateFighterHTML(rachel);
@@ -176,7 +177,13 @@ let updateFighterHTML = (player) => {
 
   // use a template to update your HTML
 }
-// let fighters = document.querySelectorAll('.dropdown-item').addEventListener('click', chooseFighter);
+
+let chooseYourChar = (event) => {
+  choose.play();
+}
+
+let choose = document.getElementById('chooseChar');
+let charChoice = document.getElementById('dropdownMenuButton').addEventListener('click', chooseYourChar);
 let fighters = document.querySelectorAll('.dropdown-item');
 // fighters.forEach(function(){addEventListener('click', chooseFighter)});
 fighters.forEach((fighter) => fighter.addEventListener('click', chooseFighter));
