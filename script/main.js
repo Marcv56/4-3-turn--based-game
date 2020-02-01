@@ -9,7 +9,8 @@ class Player {
   }
 
   attack (player) {
-    player.health -= 5;
+    let damage = Math.floor((Math.random() * 10) + 1);
+    player.health -= damage;
     // player.status = true;
   }
 }
@@ -24,8 +25,6 @@ class Enemy extends Player {
 
   }
 }
-
-
 
 
 
@@ -209,10 +208,13 @@ fighters.forEach((fighter) => fighter.addEventListener('click', chooseFighter));
 // selectedVillain.attack(selectedPlayer);
 
 
+
 let attack = (event) => {
   selectedPlayer.attack(selectedVillian);
-  console.log(marcos);
-  console.log(rachel);
+  selectedVillian.attack(selectedPlayer);
+  // setTimeout((selectedVillian.attack(selectedPlayer)),5000);
+  console.log(selectedPlayer);
+  console.log(selectedVillian);
 }
 
 
