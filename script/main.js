@@ -206,9 +206,6 @@ let attack = (event) => {
  document.querySelector(".player2-health-bar").style.width = percentage2;
 
 
-
-
-
   // console.log(selectedPlayer);
   // console.log(selectedVillian);
 
