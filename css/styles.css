@@ -1,0 +1,49 @@
+* {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#game-msg {
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+}
+
+.start-button {
+  align-self: left;
+}
+
+.dropdown-item {
+  width: 200px;
+  display: block;
+}
+
+.player-1 {
+  height: 75vh;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.player-2 {
+  height: 75vh;
+  width: 100%;
+}
+
+#playerLeft {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#playerRight {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.player-health-bar {
+  margin-top: 10px;
+  color: #FFF;
+  font-size: 20px;
+  width: 100%;
+  height: 10px;
+  background-color: red;
+}
+
+/*# sourceMappingURL=styles.css.map */
