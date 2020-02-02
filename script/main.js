@@ -181,17 +181,32 @@ let attack = (event) => {
 
   // you attack enemy
   selectedPlayer.attack(selectedVillian);
+  // variable that stores selectedPlayers health
   let playerHealth = selectedPlayer.health;
-
+  // converts health into a health bar and displays it as a percentage
     let width = playerHealth;
-    let pixel = width + "%";
+    let percentage = width + "%";
 
-    document.querySelector(".player-health-bar").style.width = pixel;
-  // document.querySelector(".player-health").innerHTML = playerHealth;
+    // inserts the changed health percentage into the HTML
+    document.querySelector(".player-health-bar").style.width = percentage;
+
 
 
   //enemy attacks back
   selectedVillian.attack(selectedPlayer);
+
+  // variable that stores selectedVillians health
+  let villianHealth = selectedVillian.health;
+
+ // converts health into a health bar and displays it as a percentage
+ let width2 = villianHealth;
+ let percentage2 = width2 + "%";
+
+ // inserts the changed health percentage into the HTML
+ document.querySelector(".player2-health-bar").style.width = percentage2;
+
+
+
 
 
   // console.log(selectedPlayer);
