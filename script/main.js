@@ -233,8 +233,7 @@ let fightButton = document.querySelector('.attack-button').addEventListener("cli
 const restart = () => { //restarts game when either player wins or loses
 let attackButton = document.getElementById('attack-button');
   player.health = 100;
-  opponet.health = 100;
-  // document.getElementById('game-message').innerText = "";
+  enemy.health = 100;
   attackButton.disabled = false;
   attackButton.hidden = false;
   document.getElementById('restart-button').hidden = true;
